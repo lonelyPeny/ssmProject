@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwua.project.dao.UserDao">
+    <!--查-->
+    <select id="selectUserByUsername" resultType="user" parameterType="string">
+        select * from sy_user where user_username =#{user_username}
+    </select>
+    <!--增-->
+    <insert id="insertUser" parameterType="user">
+        insert into sy_user values (null,#{user_username},#{user_password},#{user_sex},#{user_birthday},#{user_idCard},#{user_email},#{user_tel},#{user_address})
+    </insert>
+    <!--删-->
+    <!--<delete id="deleteUser" parameterType="user">-->
+        <!--delete from sy_user where user_username=#{user_username}-->
+    <!--</delete>-->
+    <!--改-->
+    <!--<update id="updateUser" parameterType="user">-->
+        <!--update sy_user set-->
+    <!--</update>-->
+</mapper>

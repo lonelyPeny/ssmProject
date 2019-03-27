@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwua.project.dao.GoodsDao">
+
+    <select id="selectAllType" resultType="type">
+        select * from sy_type
+    </select>
+    <select id="selectAllBigType" resultType="type">
+        select * from sy_type where type_smail=0
+    </select>
+    <select id="selectAllSmailTypeByBigType" resultType="type">
+        select * from sy_type where type_big=#{type_big}
+    </select>
+
+
+</mapper>
