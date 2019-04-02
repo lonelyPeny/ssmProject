@@ -13,8 +13,8 @@ $(document).ready(function () {
                     for(var j = 1;j<data[i].length;j++){
 
                         var $dd = $("<dd>" +
-                            "<a href='#'>"+data[i][j].type_name+"</a>"+
-                            "</dd>");
+                                        "<a href='#'>"+data[i][j].type_name+"</a>"+
+                                    "</dd>");
                         $("#index_dl").append($dd);
                     }
 

@@ -34,9 +34,8 @@ $(document).ready(function () {
             type:"post",
             success:function (data) {
                 alert(data);
-
                 if(data=="注销成功"){
-                    self.location.replace("/ssm01/jsp/login.jsp");
+                    self.location.href="../../jsp/login.jsp"
                 }
             },
             error:function () {
